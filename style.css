@@ -1,0 +1,61 @@
+.nav {
+  background: transparent;
+  padding: 10px;
+}
+
+.nav .navbar-brand, .nav .nav-item .nav-link {
+  font-weight: bold;
+  color: #fff;
+}
+
+#hero * {
+  color: #fff;
+}
+
+#hero .video {
+  position: fixed;
+  z-index: -2;
+  top: 50%; left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+#hero .overlay {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.5);
+}
+
+#hero .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 500px;
+  margin-left: 10%;
+}
+
+#hero .content .heading, #hero .content .lead {
+  font-weight: 300;
+}
+
+#hero .content .heading {
+  font-size: 5rem;
+  margin-bottom: 50px;
+}
+
+#hero .content .lead {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  #hero .content {
+    margin-left: 4%;
+  }
+}
