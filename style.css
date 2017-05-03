@@ -4,8 +4,13 @@
 }
 
 .nav .navbar-brand, .nav .nav-item .nav-link {
-  font-weight: bold;
   color: #fff;
+}
+.nav .navbar-brand {
+  font-weight: bold;
+}
+.nav .nav-item .nav-link {
+  font-weight: lighter;
 }
 
 #hero * {
@@ -28,7 +33,7 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.45);
 }
 
 #hero .content {
@@ -52,6 +57,55 @@
 
 #hero .content .lead {
   font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+#projects {
+  background: #25adff;
+  padding: 100px 20px;
+}
+
+#projects .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+#projects .description .title, #projects .description .content {
+  color: #fff;
+}
+
+#projects .description .title {
+  font-size: 4rem;
+  margin-bottom: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#projects .description .content {
+  font-weight: lighter;
+  line-height: 2rem;
+}
+
+#projects .photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projects .img-fluid {
+  max-height: 90vh;
+}
+
+#about {
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #projects .description {
+    order: 1;
+  }
 }
 
 @media screen and (max-width: 550px) {
