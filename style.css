@@ -1,10 +1,23 @@
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
 .nav {
   background: transparent;
   padding: 10px;
+  transition: all 1s;
+}
+
+.nav.active {
+  background: #fff;
 }
 
 .nav .navbar-brand, .nav .nav-item .nav-link {
   color: #fff;
+}
+.nav.active .navbar-brand, .nav.active .nav-item .nav-link {
+  color: #000;
 }
 .nav .navbar-brand {
   font-weight: bold;
@@ -100,10 +113,125 @@
 
 #about {
   background: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#about .heading {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+#about .blocks {
+  max-width: 10vw;
+  max-height: 10vw;
+}
+
+#about .cornerstone {
+  margin: 100px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+#about .cornerstone__heading {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#about .cornerstone__img {
+  max-width: 20vw;
+  max-height: 20vw;
+}
+
+#about .cornerstone__body {
+  font-weight: lighter;
+}
+
+#approach {
+  background: rgba(0,0,0,.7);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#approach * {
+  color: #fff;
+  font-weight: 300;
+}
+
+#approach .row {
+  align-items: center;
+}
+
+#approach .tree .tree__heading {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+#approach .tree .tree__body {
+  padding-left: 0;
+}
+
+#approach .tree .tree__body li {
+  list-style-type: none;
+  line-height: 50px;
+  color: gray;
+}
+
+#approach .tree .tree__body li.active {
+  color: #fff;
+}
+
+#approach .long-description {
+  padding-right: 150px;
+  display: none;
+}
+#approach .long-description.active {
+  display: block;
+}
+
+#approach .long-description h3 {
+  font-size: 50px;
+}
+
+#footer {
+  background: #fff;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#footer .overlay {
+  background: rgba(255,0,0,.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+#footer .clients .img-fluid {
+  filter: grayscale(100);
+}
+
+#footer .cta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  color: #fff;
+  z-index: 2;
+}
+
+#footer .copy-rights {
+   margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
   #projects .description {
+    order: 1;
+  }
+  
+  #about .cornerstone .justify-center {
     order: 1;
   }
 }
