@@ -30,11 +30,11 @@
 .nav .nav-item .nav-link .divider {
   display: block;
   position: absolute;
-  right: 78px;
+  right: 4.875rem;
   transition: right 1s, transform 1s;
 }
 .nav .nav-item .nav-link .divider.active {
-  right: 50px;
+  right: 3.125rem;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); 
@@ -61,7 +61,7 @@
   display: block;
   position: absolute;
   top: 20px;
-  right: 50px;
+  right: 3.125rem;
   font-weight: lighter;
   color: #000;
   transition: all 1s;
@@ -276,7 +276,8 @@
 
 @media screen and (max-width: 992px) {
   .nav .nav-link {
-    padding-right: 8px;
+    padding-right: .5em;
+    padding-left: .5em;
   }
 }
 
