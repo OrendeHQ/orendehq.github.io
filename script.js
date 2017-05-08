@@ -14,4 +14,15 @@ $(document).ready(function() {
     if (position > $(window).innerHeight()) $('.nav').addClass('active');
     else $('.nav').removeClass('active');
   });
+
+  $(document).on('click', '#toggleMenu', function() {
+    $('#toggleMenu .divider').addClass('active');
+    $('.navbar-menu').addClass('active');
+    $('.navbar-menu .close').addClass('active');
+  });
+  $(document).on('click', '.navbar-menu .close', function() {
+    $('#toggleMenu .divider').removeClass('active');
+    $('.navbar-menu').removeClass('active');
+    $('.navbar-menu .close').removeClass('active');
+  });
 });
