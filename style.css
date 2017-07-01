@@ -237,6 +237,11 @@
   font-size: 50px;
 }
 
+#approach .appr-img {
+  max-height: 40vh;
+  filter: invert(100);
+}
+
 #footer {
   background: #fff;
   padding-top: 100px;
