@@ -1,0 +1,22 @@
+{
+  "name": "orende",
+  "version": "1.0.0",
+  "description": "Orende Contact Form",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "NODE_ENV=dev nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stanleynguyen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "nodemailer": "^4.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "nodemon": "^1.11.0"
+  }
+}
