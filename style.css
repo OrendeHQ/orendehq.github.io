@@ -1,3 +1,11 @@
+* {
+  font-weight: lighter;
+}
+
+label {
+  font-size: 1.4em;
+}
+
 .justify-center {
   display: flex;
   justify-content: center;
@@ -122,6 +130,10 @@
   padding: 100px 20px;
 }
 
+#projects .container:not(:last-child) {
+  margin-bottom: 100px;
+}
+
 #projects .description {
   display: flex;
   flex-direction: column;
@@ -152,7 +164,7 @@
 }
 
 #projects .img-fluid {
-  max-height: 120vh;
+  max-height: 90vh;
 }
 
 #projects .img-fluid.tilted {
@@ -272,13 +284,38 @@
 #footer .cta {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 50px;
   color: #fff;
   z-index: 2;
 }
 
 #footer .cta h3 {
   font-weight: lighter;
+}
+
+#footer .cta .col-md-6:not(:first-child) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer form .form-control {
+  border-radius: 0;
+  border: none;
+}
+
+#footer form .btn {
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+#footer form .btn:hover, #footer form .btn:focus {
+  background: #fff;
+  color: #ff4c4c;
 }
 
 #footer .copy-rights {
@@ -303,6 +340,10 @@
   
   #approach .long-description.active {
     display: none;
+  }
+  
+  #footer .cta .col-md-6:not(:first-child) {
+    margin-top: 100px;
   }
 }
 

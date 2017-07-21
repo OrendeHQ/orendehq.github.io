@@ -20,9 +20,19 @@ $(document).ready(function() {
     $('.navbar-menu').addClass('active');
     $('.navbar-menu .close').addClass('active');
   });
+  
   $(document).on('click', '.navbar-menu .close', function() {
     $('#toggleMenu .divider').removeClass('active');
     $('.navbar-menu').removeClass('active');
     $('.navbar-menu .close').removeClass('active');
   });
+  
+  $(document).on('click', 'a[data-scroll]', function(e) {
+    e.preventDefault();
+    smoothScroll($(e.currentTarget).attr('href'), 50);
+  });
 });
+
+function smoothScroll(anchor, offset) {
+  $('body').animate({ scrollTop: $(anchor).offset().top - offset }, 'slow');
+}
