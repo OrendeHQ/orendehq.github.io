@@ -118,7 +118,7 @@
 }
 
 #projects {
-  background: #25adff;
+  background: #fff;
   padding: 100px 20px;
 }
 
@@ -131,7 +131,7 @@
 }
 
 #projects .description .title, #projects .description .content {
-  color: #fff;
+  color: #000;
 }
 
 #projects .description .title {
@@ -152,11 +152,16 @@
 }
 
 #projects .img-fluid {
-  max-height: 90vh;
+  max-height: 120vh;
+}
+
+#projects .img-fluid.tilted {
+  transform: translateZ(30deg);
 }
 
 #about {
-  background: #fff;
+  background: #000;
+  color: #fff;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -185,6 +190,7 @@
 #about .cornerstone__img {
   max-width: 20vw;
   max-height: 20vw;
+  filter: invert(100);
 }
 
 #about .cornerstone__body {
