@@ -317,6 +317,15 @@ label {
   background: #fff;
   color: #ff4c4c;
 }
+#footer form .btn.btn-loading {
+  display: none;
+}
+#footer form.sending .btn.btn-static {
+  display: none;
+}
+#footer form.sending .btn.btn-loading {
+  display: inline-block;
+}
 
 #footer .copy-rights {
    margin-top: 100px;

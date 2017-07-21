@@ -221,15 +221,20 @@
           <form>
             <fieldset class="form-group">
               <label>Email</label>
-              <input type="email" class="form-control" placeholder="Enter Your Email" required />
+              <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required />
             </fieldset>
             <fieldset class="form-group">
               <label>Message</label>
-              <textarea rows="5" class="form-control" placeholder="Enter Your Message"></textarea>
+              <textarea rows="5" name="message" class="form-control" placeholder="Enter Your Message"></textarea>
             </fieldset>
             <fieldset class="form-group">
-              <button class="btn" type="submit">
+              <button class="btn btn-static" type="submit">
                 <span class="fa fa-send-o"></span>
+                <span class="text">Send</span>
+              </button>
+              <button class="btn btn-loading" type="button">
+                <span class="fa fa-send-o fa-spin"></span>
+                <span class="text">Delivering...</span>
               </button>
             </fieldset>
           </form>

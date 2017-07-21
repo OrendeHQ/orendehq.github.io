@@ -31,8 +31,30 @@ $(document).ready(function() {
     e.preventDefault();
     smoothScroll($(e.currentTarget).attr('href'), 50);
   });
+  
+  $(document).on('submit', '#footer form', handleFormSubmit);
 });
 
 function smoothScroll(anchor, offset) {
   $('body').animate({ scrollTop: $(anchor).offset().top - offset }, 'slow');
+}
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  var $form = $(e.currentTarget);
+  var email = $form.find('input[name="email"]').val();
+  var message = $form.find('textarea[name="message"]').val();
+  $form.addClass('sending');
+  $.ajax({
+    url: 'https://orende-form.herokuapp.com',
+    method: 'POST',
+    data: { email: email, message: message }
+  }).done(function() {
+    $form[0].reset();
+    $form.removeClass('sending');
+    alert('Thank you! We\'ve gotten your message!')
+  }).fail(function(res) {
+    alert(res.message);
+    $form.removeClass('sending');
+  })
 }
