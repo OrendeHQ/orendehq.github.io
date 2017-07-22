@@ -29,7 +29,7 @@ $(document).ready(function() {
   
   $(document).on('click', 'a[data-scroll]', function(e) {
     e.preventDefault();
-    smoothScroll($(e.currentTarget).attr('href'), 50);
+    smoothScroll($(e.currentTarget).attr('href'), 0);
   });
   
   $(document).on('submit', '#footer form', handleFormSubmit);

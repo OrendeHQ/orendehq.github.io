@@ -6,6 +6,11 @@ label {
   font-size: 1.4em;
 }
 
+.logo {
+  height: 50px;
+  filter: invert(100);
+}
+
 .justify-center {
   display: flex;
   justify-content: center;
@@ -19,6 +24,10 @@ label {
 
 .nav.active {
   background: #fff;
+}
+
+.nav.active .logo {
+  filter: none;
 }
 
 .nav .navbar-brand, .nav .nav-item .nav-link {
