@@ -159,7 +159,7 @@ label {
   font-size: 4rem;
   margin-bottom: 50px;
   font-weight: 300;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 #projects .description .content {
   font-weight: lighter;
@@ -253,7 +253,9 @@ label {
 }
 
 #approach .long-description {
+  max-width: 1000px;
   padding-right: 150px;
+  line-height: 2em;
   display: none;
 }
 #approach .long-description.active {
@@ -310,17 +312,18 @@ label {
 }
 
 #footer form .form-control {
-  border-radius: 0;
+  /*border-radius: 0;*/
   border: none;
 }
 
 #footer form .btn {
-  border-radius: 0;
+  /*border-radius: 0;*/
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
   font-size: 1.4em;
   font-weight: 300;
+  margin: auto;
 }
 #footer form .btn:hover, #footer form .btn:focus {
   background: #fff;
@@ -362,6 +365,12 @@ label {
   
   #footer .cta .col-md-6:not(:first-child) {
     margin-top: 100px;
+  }
+  
+  #footer form .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
