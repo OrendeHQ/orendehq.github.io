@@ -39,6 +39,9 @@ $document.ready(function() {
   
   $window.on('scroll', checkIfInView);
   $window.trigger('scroll');
+  
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (iOS) $('.video').css('display', 'none');
 });
 
 function smoothScroll(anchor, offset) {
