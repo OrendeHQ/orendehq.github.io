@@ -12,11 +12,7 @@ $document.ready(function() {
     $tab.addClass('active');
   });
   
-  $document.on('scroll', function() {
-    var position = $(window).scrollTop();
-    if (position > $(window).innerHeight()) $('.nav').addClass('active');
-    else $('.nav').removeClass('active');
-  });
+  $document.on('scroll', documentScrollHandler);
 
   $document.on('click', '#toggleMenu', function() {
     $('#toggleMenu .divider').addClass('active');
@@ -69,6 +65,10 @@ function handleFormSubmit(e) {
 }
 
 var $animatedElements = $('.animated');
+var $projectsSection = $('#projects');
+var $aboutSection = $('#about');
+var aboutSectionTop = $aboutSection.offset().top;
+var aboutSectionBot = $aboutSection.outerHeight() + aboutSectionTop 
 function checkIfInView() {
   var windowHeight = $window.height();
   var windowTop = $window.scrollTop();
@@ -85,4 +85,26 @@ function checkIfInView() {
       $elem.removeClass('in-view');
     }
   });
+
+  if (aboutSectionTop <= (windowBot - 500)) {
+    $aboutSection.addClass('inverted');
+    $projectsSection.addClass('inverted');
+  } else {
+    $aboutSection.removeClass('inverted');
+    $projectsSection.removeClass('inverted');
+  }
+}
+
+var windowBot = $window.height() + $window.scrollTop();
+var $navBar = $('.nav')
+function documentScrollHandler() {
+ var position = $window.scrollTop();
+ 
+ if (position > $window.innerHeight()) $navBar.addClass('active');
+ else $navBar.removeClass('active');
+ 
+ var newWindowBot = $window.height() + $window.scrollTop();
+ if (newWindowBot > windowBot) $navBar.addClass('hide');
+ else $navBar.removeClass('hide');
+ windowBot = newWindowBot;
 }

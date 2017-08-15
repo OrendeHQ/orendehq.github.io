@@ -1,5 +1,11 @@
+@font-face {
+  font-family: LatoLight;
+  src: url(/fonts/Lato-Light.ttf);
+}
+
 * {
   font-weight: lighter;
+  font-family: 'LatoLight',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
 .page-wrapper {
@@ -28,18 +34,20 @@ label {
 .nav {
   background: transparent;
   padding: 10px;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1s, margin-top .3s;
+  -o-transition: all 1s, margin-top .3s;
+  transition: all 1s, margin-top .3s;
 }
 
 .nav.active {
   background: #fff;
 }
-
 .nav.active .logo {
   -webkit-filter: none;
           filter: none;
+}
+.nav.hide {
+  margin-top: -78px;
 }
 
 .nav .navbar-brand, .nav .nav-item .nav-link {
@@ -57,6 +65,7 @@ label {
   display: -ms-flexbox;
   display: flex;
 }
+
 
 .nav .nav-item .nav-link .divider {
   display: block;
@@ -174,7 +183,7 @@ label {
 }
 
 #hero .content .heading {
-  font-size: 5rem;
+  font-size: 5.7rem;
   margin-bottom: 50px;
 }
 
@@ -186,6 +195,14 @@ label {
 #projects {
   background: #fff;
   padding: 100px 20px;
+  -webkit-transition: background 1s;
+       -o-transition: background 1s;
+          transition: background 1s;
+}
+
+#projects.inverted {
+  background: #000;
+  color: #fff;
 }
 
 #projects .container:not(:last-child) {
@@ -207,10 +224,6 @@ label {
       -ms-flex-align: start;
           align-items: flex-start;
   
-}
-
-#projects .description .title, #projects .description .content {
-  color: #000;
 }
 
 #projects .description .title {
@@ -246,14 +259,25 @@ label {
 }
 
 #about {
-  background: #000;
-  color: #fff;
+  background: #fff;
   padding-top: 100px;
   padding-bottom: 100px;
+  -webkit-transition: background 1s;
+       -o-transition: background 1s;
+          transition: background 1s;
+}
+
+#about.inverted {
+  background: #000;
+  color: #fff;
+}
+#about.inverted .cornerstone__img {
+  -webkit-filter: invert(100);
+          filter: invert(100);
 }
 
 #about .heading {
-  font-size: 50px;
+  font-size: 3em;
   font-weight: 300;
 }
 
@@ -273,19 +297,18 @@ label {
 }
 
 #about .cornerstone__heading {
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 300;
 }
 
 #about .cornerstone__img {
   max-width: 20vw;
   max-height: 20vw;
-  -webkit-filter: invert(100);
-          filter: invert(100);
 }
 
 #about .cornerstone__body {
   font-weight: lighter;
+  font-size: 1.1em;
 }
 
 #approach {
@@ -318,6 +341,7 @@ label {
   list-style-type: none;
   line-height: 50px;
   color: gray;
+  font-size: 1.1em;
 }
 
 #approach .tree .tree__body li.active {
@@ -335,7 +359,11 @@ label {
 }
 
 #approach .long-description h3 {
-  font-size: 50px;
+  font-size: 3.2em;
+}
+
+#approach .long-description p {
+  font-size: 1.1em;
 }
 
 #approach .appr-img {
@@ -379,7 +407,13 @@ label {
   z-index: 2;
 }
 
+
+#footer .cta h1 {
+  font-size: 3em;
+  font-weight: lighter;
+}
 #footer .cta h3 {
+  font-size: 2em;
   font-weight: lighter;
 }
 
