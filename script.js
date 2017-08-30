@@ -1,5 +1,11 @@
 var $window = $(window);
 var $document = $(document);
+var windowBot = $window.height() + $window.scrollTop();
+var $navBar = $('.nav');
+var $animatedElements = $('.animated');
+var $projectsSection = $('#projects');
+var $aboutSection = $('#about');
+var aboutSectionTop = $aboutSection.offset().top;
 
 $document.ready(function() {
   $document.on('mouseover', '.tree .tree__body li', function() {
@@ -33,6 +39,8 @@ $document.ready(function() {
   
   $document.on('submit', '#footer form', handleFormSubmit);
   
+  // make sure that the position is correctly determined as document is ready
+  aboutSectionTop = $aboutSection.offset().top; 
   $window.on('scroll', checkIfInView);
   $window.trigger('scroll');
   
@@ -64,11 +72,6 @@ function handleFormSubmit(e) {
   })
 }
 
-var $animatedElements = $('.animated');
-var $projectsSection = $('#projects');
-var $aboutSection = $('#about');
-var aboutSectionTop = $aboutSection.offset().top;
-var aboutSectionBot = $aboutSection.outerHeight() + aboutSectionTop 
 function checkIfInView() {
   var windowHeight = $window.height();
   var windowTop = $window.scrollTop();
@@ -95,8 +98,7 @@ function checkIfInView() {
   }
 }
 
-var windowBot = $window.height() + $window.scrollTop();
-var $navBar = $('.nav')
+
 function documentScrollHandler() {
  var position = $window.scrollTop();
  
