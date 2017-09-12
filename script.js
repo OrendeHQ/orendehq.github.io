@@ -8,7 +8,7 @@ var $aboutSection = $('#about');
 var aboutSectionTop = $aboutSection.offset().top;
 
 $document.ready(function() {
-  $document.on('mouseover', '.tree .tree__body li', function() {
+  $document.on('mouseover', '.tree .tree__body li', function(event) {
     var $target = $(event.target);
     if ($target.hasClass('active')) return;
     $('.tree .tree__body li').removeClass('active');
