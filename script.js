@@ -49,7 +49,8 @@ $document.ready(function() {
 });
 
 function smoothScroll(anchor, offset) {
-  $('body').animate({ scrollTop: $(anchor).offset().top - offset }, 'slow');
+  console.log($(anchor).offset().top);
+  $('html,body').animate({ scrollTop: $(anchor).offset().top - offset }, 'slow');
 }
 
 function handleFormSubmit(e) {
