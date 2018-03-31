@@ -9,6 +9,28 @@
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+.btn-outline-dark {
+  color: #343a40;
+  background-color: transparent;
+  border-color: #343a40;
+  cursor: pointer;
+}
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.inverted .btn-outline-dark {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.inverted .btn-outline-dark:hover {
+  color: #343a40;
+  background-color: #fff;
+  border-color: #fff;
+}
+
 .page-wrapper {
   overflow-x: hidden;
 }
@@ -215,6 +237,7 @@ label {
 
 #threedprinters .description {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -543,6 +566,10 @@ label {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  #threedprinters .description,
   #projects .description {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;

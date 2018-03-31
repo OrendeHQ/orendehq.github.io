@@ -98,7 +98,6 @@ function checkIfInView() {
     }
   });
 
-  console.log(threedSectionTop, windowBot);
   if (
     (threedSectionTop <= windowBot && projectSectionTop >= windowBot) ||
     aboutSectionTop <= windowBot
