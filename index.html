@@ -21,274 +21,663 @@
   <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Ubuntu");
+    #outerCraneContainer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      box-shadow: inset 0 -60px 0 -30px #ff6347;
+    }
+
+    .buildings {
+      height: 84.9673202614379px;
+      width: 100%;
+      left: 0;
+    }
+
+    .buildings div {
+      height: inherit;
+      width: 42.48366013071895px;
+      background: #ff6347;
+      position: absolute;
+      bottom: 10%;
+    }
+
+    .buildings div:after {
+      content: '';
+      width: 80%;
+      height: 60%;
+      left: 10%;
+      bottom: 30%;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAFElEQVQImWP4////fwYYIJKDEwAAfPsP8eFXG40AAAAASUVORK5CYII=") repeat;
+      position: absolute;
+    }
+
+    .buildings div:nth-of-type(1) {
+      width: 42.48366013071895px;
+      height: 21.241830065359476px;
+      right: 37%;
+      bottom: 18%;
+    }
+
+    .buildings div:nth-of-type(1):after {
+      bottom: 11%;
+    }
+
+    .buildings div:nth-of-type(2) {
+      width: 48.552754435107374px;
+      height: 28.322440087145967px;
+      right: 30%;
+      bottom: 35%;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .buildings div:nth-of-type(2):after {
+      width: 60%;
+      left: 11%;
+    }
+
+    .buildings div:nth-of-type(3) {
+      width: 24.276377217553687px;
+      height: 37.76325344952796px;
+      left: 40%;
+      bottom: 35%;
+    }
+
+    .buildings div:nth-of-type(3):after {
+      bottom: 0;
+      width: 20%;
+      height: 85%;
+      left: 70%;
+    }
+
+    .buildings div:nth-of-type(4) {
+      width: 84.9673202614379px;
+      height: 21.241830065359476px;
+      left: 24%;
+      bottom: 20%;
+    }
+
+    .buildings div:nth-of-type(4):after {
+      background: none;
+    }
+
+    .buildings div:nth-of-type(5) {
+      width: 61.794414735591204px;
+      height: 67.97385620915033px;
+      left: 47%;
+      bottom: 10%;
+    }
+
+    .buildings div:nth-of-type(5):after {
+      bottom: 0;
+      width: 40%;
+      height: 85%;
+      left: 20%;
+    }
+
+    .crane,
+    .buildings {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .crane div {
+      border-radius: 2px;
+      position: absolute;
+    }
+
+    .crane .line {
+      border: none;
+      background: #ff6347;
+      outline: 1px solid transparent;
+      z-index: 0;
+    }
+
+    .crane .lineOne {
+      width: 60%;
+      left: 11%;
+      top: 0;
+    }
+
+    .crane .lineTwo {
+      width: 19%;
+      right: 8%;
+      top: 0;
+    }
+
+    .crane .line.lineThree {
+      height: 30%;
+      top: 22%;
+      left: 9%;
+    }
+
+    .crane .line.lineThree:after {
+      content: '';
+      position: absolute;
+      height: 0.2em;
+      width: 9000%;
+      background: #ff826c;
+      display: block;
+      bottom: 0;
+      left: -4500%;
+      border: solid 1px #ff6347;
+    }
+
+    .craneTwo .line.lineThree:after {
+      height: 0.1em;
+    }
+
+    .craneThree .line.lineThree:after {
+      height: 0.05em;
+    }
+
+    .stand {
+      height: 100%;
+      width: 5%;
+      right: 25%;
+      z-index: 1;
+      background: linear-gradient(to top, #ff6347, #f29b8b);
+    }
+
+    .craneTwo .stand {
+      background: linear-gradient(to top, #ff6347, #f19483);
+    }
+
+    .craneThree .stand {
+      background: linear-gradient(to top, #ff6347, #f08c7b);
+    }
+
+    .weight {
+      height: 20%;
+      width: 8%;
+      right: 4%;
+      top: 12%;
+      z-index: 2;
+      background: #f88f7c;
+    }
+
+    .craneTwo .weight {
+      background: #f88773;
+    }
+
+    .craneThree .weight {
+      background: #f77f6b;
+    }
+
+    .cabin {
+      height: 9%;
+      width: 12%;
+      right: 24%;
+      top: 20%;
+      z-index: 2;
+      background: #f88f7c;
+    }
+
+    .cabin:after {
+      content: '';
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      background: #fff;
+      display: block;
+      top: 60%;
+      left: 0;
+    }
+
+    .craneTwo .cabin {
+      background: #f88773;
+    }
+
+    .craneThree .cabin {
+      background: #f77f6b;
+    }
+
+    .arm {
+      height: 7%;
+      width: 100%;
+      top: 15%;
+      z-index: 3;
+      background: #f88f7c;
+    }
+
+    .craneTwo .arm {
+      background: #f88773;
+    }
+
+    .craneThree .arm {
+      background: #f77f6b;
+    }
+
+    .crane div.arm {
+      border-top-left-radius: 10px;
+    }
+
+    .brick {
+      height: 6%;
+      width: 9%;
+      bottom: 0;
+      left: 40%;
+      background: #ff7359;
+    }
+
+    .brickTwo {
+      left: 48%;
+    }
+
+    .brickThree {
+      bottom: 5.5%;
+      left: 44%;
+    }
+
+    .craneOne {
+      width: 260px;
+      height: 169.9346405228758px;
+      left: 20%;
+    }
+
+    .craneOne div {
+      border: solid 1px #ff6347;
+    }
+
+    .craneOne .line {
+      height: 1px;
+    }
+
+    .craneOne .lineThree {
+      width: 1px;
+    }
+
+    .craneTwo {
+      width: 200px;
+      height: 130.718954248366px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      left: 40%;
+      z-index: -1;
+    }
+
+    .craneTwo div {
+      border: solid 1px #ff6347;
+    }
+
+    .craneTwo .line {
+      height: 0.769230769230769px;
+    }
+
+    .craneTwo .lineThree {
+      width: 0.714285714285714px;
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+
+    .craneTwo .cabin,
+    .craneTwo .arm,
+    .craneTwo .picker,
+    .craneTwo .weight {
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+
+    .craneThree {
+      width: 130px;
+      height: 84.9673202614379px;
+      left: 60%;
+      z-index: -1;
+    }
+
+    .craneThree div {
+      border: solid 1px #ff6347;
+    }
+
+    .craneThree .line {
+      height: 0.5px;
+    }
+
+    .craneThree .lineThree {
+      width: 0.5px;
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s;
+    }
+
+    .craneThree .brickThree {
+      bottom: 5%;
+    }
+
+    .craneThree .brickOne,
+    .craneThree .brickTwo {
+      bottom: 0;
+    }
+
+    .craneThree .cabin,
+    .craneThree .arm,
+    .craneThree .picker,
+    .craneThree .weight {
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s;
+    }
+
+    .crane {
+      -webkit-perspective: 600px;
+      perspective: 600px;
+    }
+
+    .lineOne {
+      -webkit-transform-origin: right 0;
+      transform-origin: right 0;
+      -webkit-animation: moveLineOne 12s infinite alternate;
+      animation: moveLineOne 12s infinite alternate;
+    }
+
+    .lineTwo {
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation: moveLineTwo 12s infinite alternate;
+      animation: moveLineTwo 12s infinite alternate;
+    }
+
+    .lineThree {
+      -webkit-transform-origin: right center;
+      transform-origin: right center;
+      -webkit-animation: moveLineThree 12s ease-in-out infinite alternate;
+      animation: moveLineThree 12s ease-in-out infinite alternate;
+    }
+
+    .cabin,
+    .arm,
+    .picker {
+      -webkit-transform-origin: 80% center;
+      transform-origin: 80% center;
+      -webkit-animation: moveCrane 12s infinite alternate;
+      animation: moveCrane 12s infinite alternate;
+    }
+
+    .weight {
+      -webkit-transform-origin: 0 center;
+      transform-origin: 0 center;
+      -webkit-animation: moveWeight 12s infinite alternate;
+      animation: moveWeight 12s infinite alternate;
+    }
+
+    html {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to top, #283E51, #0A2342);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+      z-index: 0;
+    }
+
+    #content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Ubuntu;
+      color: #fff;
+    }
+
+    #content h1,
+    #content p {
+      margin: -8rem 0 0 1rem;
+      text-align: center;
+    }
+
+    #content p {
+      margin-top: 0.5rem;
+    }
+
+    #outerCraneContainer {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #license {
+      position: absolute;
+      bottom: 0;
+      right: 5px;
+    }
+
+    @-webkit-keyframes moveCrane {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(45deg);
+        transform: rotateY(45deg);
+      }
+    }
+
+    @keyframes moveCrane {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(45deg);
+        transform: rotateY(45deg);
+      }
+    }
+
+    @-webkit-keyframes moveWeight {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0) translateX(0);
+        transform: rotateY(0) translateX(0);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(45deg) translateX(-50%);
+        transform: rotateY(45deg) translateX(-50%);
+      }
+    }
+
+    @keyframes moveWeight {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0) translateX(0);
+        transform: rotateY(0) translateX(0);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(45deg) translateX(-50%);
+        transform: rotateY(45deg) translateX(-50%);
+      }
+    }
+
+    @-webkit-keyframes moveLineOne {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0) rotateZ(-10deg);
+        transform: rotateY(0) rotateZ(-10deg);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(45deg) rotateZ(-10deg);
+        transform: rotateY(45deg) rotateZ(-10deg);
+      }
+    }
+
+    @keyframes moveLineOne {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0) rotateZ(-10deg);
+        transform: rotateY(0) rotateZ(-10deg);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(45deg) rotateZ(-10deg);
+        transform: rotateY(45deg) rotateZ(-10deg);
+      }
+    }
+
+    @-webkit-keyframes moveLineTwo {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0) rotateZ(29deg);
+        transform: rotateY(0) rotateZ(29deg);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(15deg) rotateZ(29deg);
+        transform: rotateY(15deg) rotateZ(29deg);
+      }
+    }
+
+    @keyframes moveLineTwo {
+      0%,
+      20% {
+        -webkit-transform: rotateY(0) rotateZ(29deg);
+        transform: rotateY(0) rotateZ(29deg);
+      }
+      70%,
+      100% {
+        -webkit-transform: rotateY(15deg) rotateZ(29deg);
+        transform: rotateY(15deg) rotateZ(29deg);
+      }
+    }
+
+    @-webkit-keyframes moveLineThree {
+      0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      20% {
+        -webkit-transform: translate(2500%, -18%);
+        transform: translate(2500%, -18%);
+      }
+      60% {
+        -webkit-transform: translate(11000%, -25%);
+        transform: translate(11000%, -25%);
+      }
+      70% {
+        -webkit-transform: translate(9100%, -25%);
+        transform: translate(9100%, -25%);
+        height: 30%;
+      }
+      90%,
+      100% {
+        -webkit-transform: translate(9100%, -15%);
+        transform: translate(9100%, -15%);
+        height: 80%;
+      }
+    }
+
+    @keyframes moveLineThree {
+      0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      20% {
+        -webkit-transform: translate(2500%, -18%);
+        transform: translate(2500%, -18%);
+      }
+      60% {
+        -webkit-transform: translate(11000%, -25%);
+        transform: translate(11000%, -25%);
+      }
+      70% {
+        -webkit-transform: translate(9100%, -25%);
+        transform: translate(9100%, -25%);
+        height: 30%;
+      }
+      90%,
+      100% {
+        -webkit-transform: translate(9100%, -15%);
+        transform: translate(9100%, -15%);
+        height: 80%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="page-wrapper">
-    <nav class="nav navbar-toggleable-md navbar-light bg-faded fixed-top">
-      <a class="navbar-brand" href="#">
-        <img class="logo" src="/media/logo.png" alt="Orende Logo" />
-      </a>
-      <ul class="navbar-nav ml-auto">
-        <!-- <li class="nav-item" id="toggleMenu">
-          <a class="nav-link">
-            <span>Portfolio&nbsp;</span>
-            <span class="divider">|</span>
-            <span>&nbsp;Contact</span>
-          </a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link" data-scroll href="#footer">
-            Contact
-          </a>
-        </li>
-      </ul>
-      <!-- <div class="navbar-menu">
-        <a class="close">|</a>
-        <div class="container">
-          This is where to put all portfolio stuffs etc
-        </div>
-      </div> -->
-    </nav>
-    <section id="hero">
-      <div class="video-container">
-        <video class="video" autoplay="autoplay" loop="loop" muted="" width="100%" height="100%">
-          <source src="media/demo.mp4" type="video/mp4" />
-          <source src="media/demo.ogv" type="video/ogg" />
-          <source src="media/demo.webm" type="video/webm" />
-        </video>
-      </div>
-      <div class="video-fallback"></div>
-      <div class="overlay"></div>
-      <div class="content">
-        <h1 class="heading">We engineer the future</h1>
-        <h4 class="lead">Product Development, Web &amp; App Development, UI/UX Design, Graphic Design, Digital Fabrication</h4>
-      </div>
-    </section>
-    <section id="threedprinters" class="inverted">
-      <div class="container">
-        <h1 class="text-center title animated slide-bottom">Digital Fabrication</h1>
-        <div class="row">
-          <div class="col-md-6 description animated slide-left">
-            <h4 class="content">
-              Be empowered to shape the world. We have partnered with Anet to provide digital fabrication tools like cost effective 3D
-              printers for makers as well as educational packages for schools and companies interested in rapid prototyping.
-              Contact us for more information today.
-            </h4>
-            <a class="btn btn-outline-dark" data-scroll href="#footer">Contact Us</a>
-          </div>
-          <div class="col-md-6 photo animated slide-right">
-            <img src="media/Anet-N3.png" alt="N301 3D Printer" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="container" id="software">
-        <h1 class="title text-center">Past Projects</h1>
-        <div class="row">
-          <div class="col-md-6 description animated slide-left">
-            <h1 class="title">Holey Moley</h1>
-            <h4 class="content">
-              We built this multiplayer game to bridge the generation gap; a retro game with a modern twist.
-            </h4>
-          </div>
-          <div class="col-md-6 photo animated slide-right">
-            <img class="img-fluid tilted" src="/media/holey-moley.gif" />
-          </div>
-        </div>
-      </div>
-      <div class="container" id="hardware">
-        <div class="row">
-          <div class="col-md-6 photo animated slide-left">
-            <img class="img-fluid" src="/media/i2i.png" />
-          </div>
-          <div class="col-md-6 description animated slide-right">
-            <h1 class="title">Innovation i2i</h1>
-            <h4 class="content">
-              i2i has been very active offline but wants to gain recognition on the online scene. And we did just that.
-            </h4>
-          </div>
-        </div>
-      </div>
-      <div class="container" id="architecture">
-        <div class="row">
-          <div class="col-md-6 description animated slide-left">
-            <h1 class="title">Technic Impex</h1>
-            <h4 class="content">
-              We helped Technic Impex with a clean and sleek landing page to kickstart their online presence.
-            </h4>
-          </div>
-          <div class="col-md-6 photo animated slide-right">
-            <img class="img-fluid" src="/media/technic_impex.png" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="container">
-        <h1 class="text-center heading animated slide-bottom">Cornerstones for Success</h1>
-        <!-- <div class="row justify-center">
-          <img class="img-fluid blocks" src="https://image.freepik.com/free-icon/square-blocks-outline_318-46495.jpg" />
-        </div> -->
-        <div class="row cornerstone animated slide-bottom">
-          <div class="col-md-6">
-            <h3 class="cornerstone__heading">Multidisciplinary</h3>
-            <p class="cornerstone__body">
-              Our diverse team possesses skills across different disciplines of engineering, UI/UX design and graphics design.
-            </p>
-          </div>
-          <div class="col-md-6 justify-center">
-            <img class="img-fluid cornerstone__img" src="/media/multidisciplinary.svg" />
-          </div>
-        </div>
-        <div class="row cornerstone animated slide-bottom">
-          <div class="col-md-6 justify-center">
-            <img class="img-fluid cornerstone__img" src="/media/design_thinking.svg" />
-          </div>
-          <div class="col-md-6">
-            <h3 class="cornerstone__heading">Design Thinking</h3>
-            <p class="cornerstone__body">
-              Our user-centered design approach helps us build products both you and your customers love
-            </p>
-          </div>
-        </div>
-        <div class="row cornerstone animated slide-bottom">
-          <div class="col-md-6">
-            <h3 class="cornerstone__heading">Out-of-the-box Solutions</h3>
-            <p class="cornerstone__body">
-              We work closely with you for innovations that can disrupt industries. We possess skills that allow startups to prototype
-              and test ideas quickly.
-            </p>
-          </div>
-          <div class="col-md-6 justify-center">
-            <img class="img-fluid cornerstone__img" src="/media/oftb_solution.svg" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="approach">
-      <div class="container">
-        <div class="row animated slide-bottom">
-          <div class="col-md-9">
-            <div class="long-description active" id="description-1">
-              <!-- <img class="img-fluid appr-img" src="/media/product_dev.svg" /> -->
-              <h3>Product Development</h3>
-              <p>
-                From problem definition to ideation, from ideas to prototypes, we will work with you closely to develop your next big idea.
-                We possess the skills to help you make your kickstarter products come to life.
-              </p>
-            </div>
-            <div class="long-description" id="description-2">
-              <!-- <img class="img-fluid appr-img" src="/media/web_dev.svg" /> -->
-              <h3>Web Development</h3>
-              <p>
-                No one can live without the Internet these days. Get your companies on the Internet and make your presence known. We specialise
-                in building websites, backend management services for your businesses and even turn your businesses into
-                an e-commerce.
-              </p>
-            </div>
-            <div class="long-description" id="description-3">
-              <!-- <img class="img-fluid appr-img" src="/media/mobile_dev.svg" /> -->
-              <h3>Mobile Development</h3>
-              <p>
-                Mobile presence is increasingly important. Need an app for both iOS and Android devices? We got it covered. Our designer-engineer
-                dynamics ensure both functionality and aesthetic of your next app.
-              </p>
-            </div>
-            <div class="long-description" id="description-4">
-              <!-- <img class="img-fluid appr-img" src="/media/uiux.svg" /> -->
-              <h3>UI/UX Design</h3>
-              <p>
-                Design is not just about how it looks. It's about how it feels, how it works, and how it satisfy needs. Through research
-                and understanding of your target audience, we make your products beautiful and ensure that they look, feel,
-                and work great.
-              </p>
-            </div>
-            <div class="long-description" id="description-5">
-              <!-- <img class="img-fluid appr-img" src="/media/prototyping.svg" /> -->
-              <h3>Prototyping &amp; Testing</h3>
-              <p>
-                For the crazy ones with ideas but lack the skills to build them, we can help you prototype and identify design problems.
-                Through our iterative design process, your products will only get better.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3 tree">
-            <h4 class="tree__heading">Tree of Knowledge</h4>
-            <ul class="tree__body">
-              <li data-tab="description-1">Product Development</li>
-              <li data-tab="description-2">Web Development</li>
-              <li data-tab="description-3">Mobile Development</li>
-              <li data-tab="description-4">UI/UX Design</li>
-              <li data-tab="description-5">Prototyping &amp; Testing</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="footer">
-      <div class="overlay"></div>
-      <!-- <div class="container clients">
-        <div class="row">
-          <div class="col-md-3">
-            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" />
-          </div>
-          <div class="col-md-3">
-            <img class="img-fluid" src="https://blog.hipchat.com/wp-content/uploads/2016/04/facebook-logo.png" />
-          </div>
-          <div class="col-md-3">
-            <img class="img-fluid" src="http://static1.businessinsider.com/image/539f3ffbecad044276726c01-960/amazon-com-logo.jpg" />
-          </div>
-          <div class="col-md-3">
-            <img class="img-fluid" src="http://news.siliconallee.com/wp-content/uploads/2012/03/twitter_logo_wide-600x111.png" />
-          </div>
-        </div>
-      </div> -->
-      <div class="container cta">
-        <div class="row">
-          <div class="col-md-6 animated slide-bottom">
-            <form>
-              <fieldset class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required />
-              </fieldset>
-              <fieldset class="form-group">
-                <label>Message</label>
-                <textarea rows="5" name="message" class="form-control" placeholder="Enter Your Message"></textarea>
-              </fieldset>
-              <fieldset class="form-group">
-                <button class="btn btn-static" type="submit">
-                  <span class="fa fa-send-o"></span>
-                  <span class="text">Send</span>
-                </button>
-                <button class="btn btn-loading" type="button">
-                  <span class="fa fa-send-o fa-spin"></span>
-                  <span class="text">Delivering...</span>
-                </button>
-              </fieldset>
-            </form>
-          </div>
-          <div class="col-md-6 animated slide-bottom prompt">
-            <h1 class="text-center">Wanna work with us?</h1>
-            <h3 class="text-center">wassup@orende.io</h3>
-          </div>
-        </div>
-      </div>
-      <div class="container copy-rights">
-        <p class="text-center">Orende</p>
-        <p class="text-center">&copy; Copyright 2017. All Rights Reserved</p>
-      </div>
-    </section>
+
+  <div id="content">
+    <div class="stars"></div>
+    <h1>
+      building the future of logistics
+    </h1>
+    <p>Coming to your doorstep soon</p>
   </div>
+  <div id="outerCraneContainer">
+    <div class="buildings">
+      <div></div>
+      <div class="1"></div>
+      <div class="2"></div>
+      <div class="3"></div>
+      <div class="4"></div>
+    </div>
+    <div class="crane craneThree">
+      <div class="line lineOne"></div>
+      <div class="line lineTwo"></div>
+      <div class="line lineThree"></div>
+      <div class="stand"></div>
+      <div class="weight"></div>
+      <div class="cabin"></div>
+      <div class="arm"></div>
+    </div>
+    <div class="crane craneTwo">
+      <div class="line lineOne"></div>
+      <div class="line lineTwo"></div>
+      <div class="line lineThree"></div>
+      <div class="stand"></div>
+      <div class="weight"></div>
+      <div class="cabin"></div>
+      <div class="arm"></div>
+    </div>
+    <div class="crane craneOne">
+      <div class="line lineOne"></div>
+      <div class="line lineTwo"></div>
+      <div class="line lineThree"></div>
+      <div class="stand"></div>
+      <div class="weight"></div>
+      <div class="cabin"></div>
+      <div class="arm"></div>
+    </div>
+  </div>
+  <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" id="license">
+    <img alt="Creative Commons License" style="border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+    />
+  </a> -->
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-  crossorigin="anonymous"></script>
-<script src="script.js"></script>

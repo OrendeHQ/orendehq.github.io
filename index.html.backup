@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Orende</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <nav class="nav navbar-toggleable-md navbar-light bg-faded fixed-top">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="/media/logo.png" alt="Orende Logo" />
+      </a>
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item" id="toggleMenu">
+          <a class="nav-link">
+            <span>Portfolio&nbsp;</span>
+            <span class="divider">|</span>
+            <span>&nbsp;Contact</span>
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" data-scroll href="#footer">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <!-- <div class="navbar-menu">
+        <a class="close">|</a>
+        <div class="container">
+          This is where to put all portfolio stuffs etc
+        </div>
+      </div> -->
+    </nav>
+    <section id="hero">
+      <div class="video-container">
+        <video class="video" autoplay="autoplay" loop="loop" muted="" width="100%" height="100%">
+          <source src="media/demo.mp4" type="video/mp4" />
+          <source src="media/demo.ogv" type="video/ogg" />
+          <source src="media/demo.webm" type="video/webm" />
+        </video>
+      </div>
+      <div class="video-fallback"></div>
+      <div class="overlay"></div>
+      <div class="content">
+        <h1 class="heading">We engineer the future</h1>
+        <h4 class="lead">Product Development, Web &amp; App Development, UI/UX Design, Graphic Design, Digital Fabrication</h4>
+      </div>
+    </section>
+    <section id="threedprinters" class="inverted">
+      <div class="container">
+        <h1 class="text-center title animated slide-bottom">Digital Fabrication</h1>
+        <div class="row">
+          <div class="col-md-6 description animated slide-left">
+            <h4 class="content">
+              Be empowered to shape the world. We have partnered with Anet to provide digital fabrication tools like cost effective 3D
+              printers for makers as well as educational packages for schools and companies interested in rapid prototyping.
+              Contact us for more information today.
+            </h4>
+            <a class="btn btn-outline-dark" data-scroll href="#footer">Contact Us</a>
+          </div>
+          <div class="col-md-6 photo animated slide-right">
+            <img src="media/Anet-N3.png" alt="N301 3D Printer" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container" id="software">
+        <h1 class="title text-center">Past Projects</h1>
+        <div class="row">
+          <div class="col-md-6 description animated slide-left">
+            <h1 class="title">Holey Moley</h1>
+            <h4 class="content">
+              We built this multiplayer game to bridge the generation gap; a retro game with a modern twist.
+            </h4>
+          </div>
+          <div class="col-md-6 photo animated slide-right">
+            <img class="img-fluid tilted" src="/media/holey-moley.gif" />
+          </div>
+        </div>
+      </div>
+      <div class="container" id="hardware">
+        <div class="row">
+          <div class="col-md-6 photo animated slide-left">
+            <img class="img-fluid" src="/media/i2i.png" />
+          </div>
+          <div class="col-md-6 description animated slide-right">
+            <h1 class="title">Innovation i2i</h1>
+            <h4 class="content">
+              i2i has been very active offline but wants to gain recognition on the online scene. And we did just that.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="architecture">
+        <div class="row">
+          <div class="col-md-6 description animated slide-left">
+            <h1 class="title">Technic Impex</h1>
+            <h4 class="content">
+              We helped Technic Impex with a clean and sleek landing page to kickstart their online presence.
+            </h4>
+          </div>
+          <div class="col-md-6 photo animated slide-right">
+            <img class="img-fluid" src="/media/technic_impex.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h1 class="text-center heading animated slide-bottom">Cornerstones for Success</h1>
+        <!-- <div class="row justify-center">
+          <img class="img-fluid blocks" src="https://image.freepik.com/free-icon/square-blocks-outline_318-46495.jpg" />
+        </div> -->
+        <div class="row cornerstone animated slide-bottom">
+          <div class="col-md-6">
+            <h3 class="cornerstone__heading">Multidisciplinary</h3>
+            <p class="cornerstone__body">
+              Our diverse team possesses skills across different disciplines of engineering, UI/UX design and graphics design.
+            </p>
+          </div>
+          <div class="col-md-6 justify-center">
+            <img class="img-fluid cornerstone__img" src="/media/multidisciplinary.svg" />
+          </div>
+        </div>
+        <div class="row cornerstone animated slide-bottom">
+          <div class="col-md-6 justify-center">
+            <img class="img-fluid cornerstone__img" src="/media/design_thinking.svg" />
+          </div>
+          <div class="col-md-6">
+            <h3 class="cornerstone__heading">Design Thinking</h3>
+            <p class="cornerstone__body">
+              Our user-centered design approach helps us build products both you and your customers love
+            </p>
+          </div>
+        </div>
+        <div class="row cornerstone animated slide-bottom">
+          <div class="col-md-6">
+            <h3 class="cornerstone__heading">Out-of-the-box Solutions</h3>
+            <p class="cornerstone__body">
+              We work closely with you for innovations that can disrupt industries. We possess skills that allow startups to prototype
+              and test ideas quickly.
+            </p>
+          </div>
+          <div class="col-md-6 justify-center">
+            <img class="img-fluid cornerstone__img" src="/media/oftb_solution.svg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="approach">
+      <div class="container">
+        <div class="row animated slide-bottom">
+          <div class="col-md-9">
+            <div class="long-description active" id="description-1">
+              <!-- <img class="img-fluid appr-img" src="/media/product_dev.svg" /> -->
+              <h3>Product Development</h3>
+              <p>
+                From problem definition to ideation, from ideas to prototypes, we will work with you closely to develop your next big idea.
+                We possess the skills to help you make your kickstarter products come to life.
+              </p>
+            </div>
+            <div class="long-description" id="description-2">
+              <!-- <img class="img-fluid appr-img" src="/media/web_dev.svg" /> -->
+              <h3>Web Development</h3>
+              <p>
+                No one can live without the Internet these days. Get your companies on the Internet and make your presence known. We specialise
+                in building websites, backend management services for your businesses and even turn your businesses into
+                an e-commerce.
+              </p>
+            </div>
+            <div class="long-description" id="description-3">
+              <!-- <img class="img-fluid appr-img" src="/media/mobile_dev.svg" /> -->
+              <h3>Mobile Development</h3>
+              <p>
+                Mobile presence is increasingly important. Need an app for both iOS and Android devices? We got it covered. Our designer-engineer
+                dynamics ensure both functionality and aesthetic of your next app.
+              </p>
+            </div>
+            <div class="long-description" id="description-4">
+              <!-- <img class="img-fluid appr-img" src="/media/uiux.svg" /> -->
+              <h3>UI/UX Design</h3>
+              <p>
+                Design is not just about how it looks. It's about how it feels, how it works, and how it satisfy needs. Through research
+                and understanding of your target audience, we make your products beautiful and ensure that they look, feel,
+                and work great.
+              </p>
+            </div>
+            <div class="long-description" id="description-5">
+              <!-- <img class="img-fluid appr-img" src="/media/prototyping.svg" /> -->
+              <h3>Prototyping &amp; Testing</h3>
+              <p>
+                For the crazy ones with ideas but lack the skills to build them, we can help you prototype and identify design problems.
+                Through our iterative design process, your products will only get better.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 tree">
+            <h4 class="tree__heading">Tree of Knowledge</h4>
+            <ul class="tree__body">
+              <li data-tab="description-1">Product Development</li>
+              <li data-tab="description-2">Web Development</li>
+              <li data-tab="description-3">Mobile Development</li>
+              <li data-tab="description-4">UI/UX Design</li>
+              <li data-tab="description-5">Prototyping &amp; Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="overlay"></div>
+      <!-- <div class="container clients">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" />
+          </div>
+          <div class="col-md-3">
+            <img class="img-fluid" src="https://blog.hipchat.com/wp-content/uploads/2016/04/facebook-logo.png" />
+          </div>
+          <div class="col-md-3">
+            <img class="img-fluid" src="http://static1.businessinsider.com/image/539f3ffbecad044276726c01-960/amazon-com-logo.jpg" />
+          </div>
+          <div class="col-md-3">
+            <img class="img-fluid" src="http://news.siliconallee.com/wp-content/uploads/2012/03/twitter_logo_wide-600x111.png" />
+          </div>
+        </div>
+      </div> -->
+      <div class="container cta">
+        <div class="row">
+          <div class="col-md-6 animated slide-bottom">
+            <form>
+              <fieldset class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required />
+              </fieldset>
+              <fieldset class="form-group">
+                <label>Message</label>
+                <textarea rows="5" name="message" class="form-control" placeholder="Enter Your Message"></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <button class="btn btn-static" type="submit">
+                  <span class="fa fa-send-o"></span>
+                  <span class="text">Send</span>
+                </button>
+                <button class="btn btn-loading" type="button">
+                  <span class="fa fa-send-o fa-spin"></span>
+                  <span class="text">Delivering...</span>
+                </button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="col-md-6 animated slide-bottom prompt">
+            <h1 class="text-center">Wanna work with us?</h1>
+            <h3 class="text-center">wassup@orende.io</h3>
+          </div>
+        </div>
+      </div>
+      <div class="container copy-rights">
+        <p class="text-center">Orende</p>
+        <p class="text-center">&copy; Copyright 2017. All Rights Reserved</p>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
